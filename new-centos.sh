@@ -7,15 +7,15 @@ yum install xz telnet bind-utils vim wget git gcc kernel-devel ncurses-devel -y
 wget http://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.4.6.tar.gz
 tar -xzvf libtool-2.4.6.tar.gz
 cd libtool-2.4.6
-make && make install && cd ../
+./configure && make -j4 && make install && cd ../
 wget http://mirrors.ustc.edu.cn/gnu/autoconf/autoconf-2.69.tar.gz
 tar -xzvf autoconf-2.69.tar.gz
 cd autoconf-2.69
-make && make install && cd ../
+./configure && make -j4 && make install && cd ../
 wget http://mirrors.ustc.edu.cn/gnu/automake/automake-1.15.1.tar.gz
 tar -xzvf automake-1.15.1.tar.gz
 cd automake-1.15.1
-make && make install && cd ../
+./configure && make -j4 && make install && cd ../
 wget http://mirrors.ustc.edu.cn/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.gz
 wget http://mirrors.ustc.edu.cn/gnu/gmp/gmp-6.1.0.tar.bz2
 wget http://mirrors.ustc.edu.cn/gnu/mpfr/mpfr-3.1.4.tar.bz2
