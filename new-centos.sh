@@ -33,3 +33,5 @@ make -j4 && make install && cd /root/mpfr-3.1.4
 make -j4 && make install && cd /root/mpc-1.0.3
 ./configure --prefix=/opt/mpc-1.0.3 --with-gmp=/opt/gmp-6.1.0 --with-mpfr=/opt/mpfr-3.1.4
 make -j4 && make install && cd /root/isl-0.16.1
+./configure --prefix=/opt/isl-0.16.1 --with-gmp-prefix=/opt/gmp-6.1.0
+make -j4 && make install
