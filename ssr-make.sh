@@ -8,7 +8,8 @@ yum -y groupinstall "Development Tools"
 curl https://bintray.com/sbt/rpm/rpm | tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 yum install sbt -y
 
-wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
+# wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
 wget https://dl.google.com/android/repository/android-ndk-r13-linux-x86_64.zip
 tar zxvf android-sdk_r24.4.1-linux.tgz
 unzip android-ndk-r13-linux-x86_64.zip
