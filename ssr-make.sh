@@ -10,7 +10,8 @@ yum install sbt -y
 
 wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip
 # wget https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
-wget https://dl.google.com/android/repository/android-ndk-r13-linux-x86_64.zip
+wget https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip
+# wget https://dl.google.com/android/repository/android-ndk-r13-linux-x86_64.zip
 tar zxvf android-sdk_r24.4.1-linux.tgz
 unzip android-ndk-r13-linux-x86_64.zip
 
