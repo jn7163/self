@@ -17,8 +17,8 @@ unzip sdk-tools-linux-3859397.zip
 unzip android-ndk-r14b-linux-x86_64.zip
 # unzip android-ndk-r13-linux-x86_64.zip
 
-echo 'export ANDROID_HOME="/root/android-sdk-linux"' >> /etc/profile
-echo 'export ANDROID_NDK_HOME="/root/android-ndk-r13"' >> /etc/profile
+echo 'export ANDROID_HOME="/root/tools"' >> /etc/profile
+echo 'export ANDROID_NDK_HOME="/root/android-ndk-r14b"' >> /etc/profile
 echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_NDK_HOME"' >> /etc/profile
 source /etc/profile
 echo "y" | android update sdk --filter tools,platform-tools,build-tools-23.0.2,android-23,extra-google-m2repository --no-ui -a
@@ -32,7 +32,7 @@ android update sdk --no-ui
 
 git clone https://github.com/glzjin/shadowsocksr-android
 
-//向vps上传一个jks密钥文件，同时编辑密钥设置
+## 向vps上传一个jks密钥文件，同时编辑密钥设置
 
 cd shadowsocksr-android
 cp local.properties.example local.properties
