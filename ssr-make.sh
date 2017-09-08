@@ -13,7 +13,6 @@ echo 'export ANDROID_NDK_HOME="/root/android-ndk-r14b"' >> /etc/profile
 echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/26.0.1:$ANDROID_NDK_HOME"' >> /etc/profile
 source /etc/profile
 
-echo "y" | android update sdk --filter tools,platform-tools,build-tools-23.0.2,android-23,extra-google-m2repository --no-ui -a
 mkdir /root/.android && touch /root/.android/repositories.cfg
 /root/android-sdk/tools/bin/sdkmanager "platform;"
 /root/android-sdk/tools/bin/sdkmanager "buildtools;26.0.1"
