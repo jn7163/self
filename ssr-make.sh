@@ -23,9 +23,20 @@ git clone https://github.com/shadowsocksr-backup/shadowsocksr-android
 
 keytool -genkeypair -alias testname -keystore /root/ssr.keystore -sigalg MD5withRSA -keyalg RSA
 
-cd shadowsocksr-android
-cp local.properties.example local.properties
-vim local.properties
+cp /root/shadowsocksr-android/local.properties.example /root/shadowsocksr-android/local.properties
+vim /root/shadowsocksr-android/local.properties
+
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz
+tar -zxvf  glibc-2.14.tar.gz
+mkdir glibc-2.14/glibc-2.14-build && cd glibc-2.14/glibc-2.14-build
+../configure --prefix=/opt/glibc-2.14
+make && make install && cd
+
+wget http://ftp.gnu.org/gnu/glibc/glibc-2.15.tar.gz
+tar -zxvf  glibc-2.15.tar.gz
+mkdir glibc-2.15/glibc-2.15-build && cd glibc-2.15/glibc-2.15-build
+../configure --prefix=/opt/glibc-2.15
+make && make install && cd
 
 echo "rm -rf /lib64/libc.so.6
 LD_PRELOAD=/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6" >> /root/default-glibc.sh
@@ -39,6 +50,7 @@ rm -rf /lib64/libc.so.6
 LD_PRELOAD=/opt/glibc-${ver}/lib/libc-${ver}.so ln -s /opt/glibc-${ver}/lib/libc-${ver}.so /lib64/libc.so.6" >> /root/glibc-2.15.sh
 chmod +x /root/glibc-2.15.sh
 
+cd /root/shadowsocksr-android
 git submodule update --init
 /root/glibc-2.15.sh
 ./build.sh
