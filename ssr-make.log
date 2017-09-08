@@ -22,7 +22,8 @@ echo "y" | /root/android-sdk/tools/bin/sdkmanager "extra;android;m2repository"
 
 git clone https://github.com/shadowsocksr-backup/shadowsocksr-android
 
-keytool -genkeypair -alias testname -keystore /root/ssr.keystore -sigalg MD5withRSA -keyalg RSA ##最后一步密码留空
+##最后一步密码留空
+keytool -genkeypair -alias testname -keystore /root/ssr.keystore -sigalg MD5withRSA -keyalg RSA
 
 cp /root/shadowsocksr-android/local.properties.example /root/shadowsocksr-android/local.properties
 vim /root/shadowsocksr-android/local.properties
