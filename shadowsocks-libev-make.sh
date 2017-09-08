@@ -27,3 +27,4 @@ cd /etc/init.d
 wget https://raw.githubusercontent.com/max2max/self/master/ssredir
 chkconfig ssredir on
 chmod +x ssredir
+cd /etc/ && wget https://raw.githubusercontent.com/max2max/self/master/ss.json
