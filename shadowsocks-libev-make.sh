@@ -22,4 +22,8 @@ popd
 ldconfig
 cd shadowsocks-libev
 ./autogen.sh && ./configure --prefix=/opt/shadowsocks-libev && make
-make install
+make install && cd
+cd /etc/init.d
+wget https://raw.githubusercontent.com/max2max/self/master/ssredir
+chkconfig ssredir on
+chmod +x ssredir
