@@ -1,24 +1,24 @@
 Name:           nginx
 Version:        1.12.1
-Release: 1%{?dist}
-Summary: Test
-Group:  Test
-License: No
-URL:  http://nginx.org
-Source0: http://nginx.org/download/%{name}-%{version}.tar.gz
-Source1:        https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz
-Source2:        https://www.openssl.org/source/openssl-1.0.2l.tar.gz
-Source3:        https://zlib.net/zlib-1.2.11.tar.gz
-BuildRequires: gcc, automake
-Requires: gcc
+Release:        1%{?dist}
+Summary:        Test
+Group:          Test
+License:        No
+URL:            http://nginx.org
+Source0:        http://nginx.org/download/%{name}-%{version}.tar.gz
+BuildRequires:  gcc, automake
+Requires:       gcc
 BuildRoot:      %_topdir/BUILDROOT
 Prefix:         /opt/test/%{name}-%{version}
+
 %description
+
 %prep
 %setup -q
 tar -xzvf %_topdir/SOURCES/pcre-8.41.tar.gz -C %_topdir/BUILD/
 tar -xzvf %_topdir/SOURCES/openssl-1.0.2l.tar.gz -C %_topdir/BUILD/
 tar -xzvf %_topdir/SOURCES/zlib-1.2.11.tar.gz -C %_topdir/BUILD/
+
 %build
 ./configure \
 --prefix=%{prefix} \
@@ -27,7 +27,7 @@ tar -xzvf %_topdir/SOURCES/zlib-1.2.11.tar.gz -C %_topdir/BUILD/
 --with-pcre=%_topdir/BUILD/pcre-8.41 \
 --with-openssl=%_topdir/BUILD/openssl-1.0.2l \
 --with-zlib=%_topdir/BUILD/zlib-1.2.11 \
---add-module=%_topdir/SOURCES/nginx-ct 
+--add-module=%_topdir/SOURCES/nginx-ct \
 --add-module=%_topdir/SOURCES/ngx_http_google_filter_module \
 --add-module=%_topdir/SOURCES/ngx_http_substitutions_filter_module \
 --with-http_ssl_module \
@@ -46,13 +46,17 @@ tar -xzvf %_topdir/SOURCES/zlib-1.2.11.tar.gz -C %_topdir/BUILD/
 --with-http_random_index_module \
 --with-mail \
 --with-mail_ssl_module \
+--with-stream \
+--with-stream_ssl_module \
 --with-debug \
 --with-pcre-jit
+
 make %{?_smp_mflags}
- 
+
 %install
 rm -rf %{buildroot}/*
 make install DESTDIR=%{buildroot}
+
 %files
 %{prefix}/conf/fastcgi.conf
 %{prefix}/conf/fastcgi.conf.default
@@ -72,7 +76,7 @@ make install DESTDIR=%{buildroot}
 %{prefix}/html/50x.html
 %{prefix}/html/index.html
 %{prefix}/sbin/nginx
- 
+
 %doc
- 
+
 %changelog
