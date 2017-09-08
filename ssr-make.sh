@@ -39,8 +39,8 @@ mkdir glibc-2.15/glibc-2.15-build && cd glibc-2.15/glibc-2.15-build
 make && make install && cd
 
 echo "rm -rf /lib64/libc.so.6
-LD_PRELOAD=/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6" >> /root/default-glibc.sh
-chmod +x /root/default-glibc.sh
+LD_PRELOAD=/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6" >> /root/glibc-default.sh
+chmod +x /root/glibc-default.sh
 echo "ver=2.14
 rm -rf /lib64/libc.so.6
 LD_PRELOAD=/opt/glibc-${ver}/lib/libc-${ver}.so ln -s /opt/glibc-${ver}/lib/libc-${ver}.so /lib64/libc.so.6" >> /root/glibc-2.14.sh
@@ -56,3 +56,4 @@ git submodule update --init
 ./build.sh
 /root/glibc-2.14.sh
 sbt clean android:package-release
+/root/glibc-default.sh
