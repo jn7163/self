@@ -17,3 +17,16 @@ export CC=/opt/gcc-${mygccver}/bin/gcc
 export CXX=/opt/gcc-${mygccver}/bin/g++
 export CPP=/opt/gcc-${mygccver}/bin/cpp
 EOF
+
+## another plan
+mv /usr/bin/gcc /usr/bin/gcc-4.4.7
+mv /usr/bin/cpp /usr/bin/cpp-4.4.7
+
+update-alternatives install /usr/bin/gcc gcc /usr/bin/gcc-4.4.7 99
+update-alternatives install /usr/bin/gcc gcc /opt/gcc-7.2.0/bin/gcc 100
+
+update-alternatives install /usr/bin/cpp cpp /usr/bin/cpp-4.4.7 99
+update-alternatives install /usr/bin/cpp cpp /opt/gcc-7.2.0/bin/cpp 100
+
+update-alternatives --config gcc
+update-alternatives --config cpp
