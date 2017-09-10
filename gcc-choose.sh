@@ -5,7 +5,7 @@ yum install gcc -y
 yum remove gcc cpp -y
 
 ## others
-cat  << EOF >> /etc/profile
+cat  << "EOF" >> /etc/profile
 export mygccver="7.1.0"
 export mygmpver="6.1.0"
 export mympcver="1.0.3"
@@ -22,11 +22,11 @@ EOF
 mv /usr/bin/gcc /usr/bin/gcc-4.4.7
 mv /usr/bin/cpp /usr/bin/cpp-4.4.7
 
-update-alternatives install /usr/bin/gcc gcc /usr/bin/gcc-4.4.7 99
-update-alternatives install /usr/bin/gcc gcc /opt/gcc-7.2.0/bin/gcc 100
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.4.7 99
+update-alternatives --install /usr/bin/gcc gcc /opt/gcc-7.2.0/bin/gcc 100
 
-update-alternatives install /usr/bin/cpp cpp /usr/bin/cpp-4.4.7 99
-update-alternatives install /usr/bin/cpp cpp /opt/gcc-7.2.0/bin/cpp 100
+update-alternatives --install /usr/bin/cpp cpp /usr/bin/cpp-4.4.7 99
+update-alternatives --install /usr/bin/cpp cpp /opt/gcc-7.2.0/bin/cpp 100
 
 update-alternatives --config gcc
 update-alternatives --config cpp
