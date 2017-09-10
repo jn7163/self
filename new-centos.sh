@@ -3,7 +3,7 @@ netdate ntp.sjtu.edu.cn
 yum install epel-release -y
 yum update -y
 yum upgrade -y
-yum install xz telnet bind-utils vim wget git gcc gcc-c++ bison texinfo kernel-devel ncurses-devel pcre-devel -y
+yum install xz telnet bind-utils vim wget git gcc gcc-c++ bison texinfo kernel-devel ncurses-devel pcre-devel unzip -y
 wget http://mirrors.ustc.edu.cn/gnu/libtool/libtool-2.4.6.tar.gz
 tar -xzvf libtool-2.4.6.tar.gz
 cd libtool-2.4.6
