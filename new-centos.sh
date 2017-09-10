@@ -20,7 +20,7 @@ wget http://mirrors.ustc.edu.cn/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.gz
 wget http://mirrors.ustc.edu.cn/gnu/gmp/gmp-6.1.0.tar.bz2
 wget http://mirrors.ustc.edu.cn/gnu/mpfr/mpfr-3.1.4.tar.bz2
 wget http://mirrors.ustc.edu.cn/gnu/mpc/mpc-1.0.3.tar.gz
-wget https://dl.ccavs.org/isl-0.16.1.tar.bz2
+wget https://dl.ccavs.org/mirror/gcc/isl-0.16.1.tar.bz2
 tar -xzvf gcc-7.2.0.tar.gz
 tar -xjvf gmp-6.1.0.tar.bz2
 tar -xjvf mpfr-3.1.4.tar.bz2
