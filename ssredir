@@ -20,8 +20,8 @@
 # Check that networking is up.
 [ ${NETWORKING} ="yes" ] || exit 0
 
-if [ -f /opt/shadowsocks-libev/bin/ss-redir ]; then
-    DAEMON=/opt/shadwsocks-libev/bin/ss-redir
+if [ -f /opt/shadowsocks-libev/bin/ss-server ]; then
+    DAEMON=/opt/shadowsocks-libev/bin/ss-server
 elif [ -f /usr/bin/ss-server ]; then
     DAEMON=/usr/bin/ss-server
 fi
