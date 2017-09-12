@@ -1,12 +1,5 @@
-## default gcc-4.4
-yum install gcc -y
-
-## delete default gcc
-yum remove gcc cpp -y
-
-## others
 cat  << "EOF" >> /etc/profile
-export mygccver="7.1.0"
+export mygccver="7.2.0"
 export mygmpver="6.1.0"
 export mympcver="1.0.3"
 export mympfrver="3.1.4"
@@ -18,7 +11,6 @@ export CXX=/opt/gcc-${mygccver}/bin/g++
 export CPP=/opt/gcc-${mygccver}/bin/cpp
 EOF
 
-## another plan
 mv /usr/bin/gcc /usr/bin/gcc-4.4.7
 mv /usr/bin/cpp /usr/bin/cpp-4.4.7
 
