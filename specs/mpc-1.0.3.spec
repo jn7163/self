@@ -1,5 +1,5 @@
-Name:           mpfr
-Version:        3.1.4
+Name:           mpc
+Version:        1.0.3
 Release:        1%{?dist}
 Summary:        Test
 Group:          Test
