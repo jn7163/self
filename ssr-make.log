@@ -15,10 +15,11 @@ echo 'export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDRO
 source /etc/profile
 
 mkdir /root/.android && touch /root/.android/repositories.cfg
+echo "y" | /root/android-sdk/tools/bin/sdkmanager "platform-tools"
 echo "y" | /root/android-sdk/tools/bin/sdkmanager "platforms;android-26"
-echo "y" | /root/android-sdk/tools/bin/sdkmanager "buildtools;26.0.1"
-echo "y" | /root/android-sdk/tools/bin/sdkmanager "extra;google;m2repository"
-echo "y" | /root/android-sdk/tools/bin/sdkmanager "extra;android;m2repository"
+echo "y" | /root/android-sdk/tools/bin/sdkmanager "build-tools;26.0.1"
+echo "y" | /root/android-sdk/tools/bin/sdkmanager "extras;google;m2repository"
+echo "y" | /root/android-sdk/tools/bin/sdkmanager "extras;android;m2repository"
 
 git clone https://github.com/shadowsocksr-backup/shadowsocksr-android
 
