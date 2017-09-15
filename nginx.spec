@@ -6,8 +6,8 @@ Group:          Test
 License:        No
 URL:            http://nginx.org
 Source0:        http://nginx.org/download/%{name}-%{version}.tar.gz
-BuildRequires:  gcc, automake
-Requires:       gcc
+#BuildRequires:  gcc, automake
+#Requires:       gcc
 BuildRoot:      %_topdir/BUILDROOT
 Prefix:         /opt/test/%{name}-%{version}
 
@@ -54,7 +54,6 @@ tar -xzvf %_topdir/SOURCES/zlib-1.2.11.tar.gz -C %_topdir/BUILD/
 make %{?_smp_mflags}
 
 %install
-rm -rf %{buildroot}/*
 make install DESTDIR=%{buildroot}
 
 %files
