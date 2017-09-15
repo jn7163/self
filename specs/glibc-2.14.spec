@@ -6,8 +6,8 @@ Group:          Test
 License:        No
 URL:            http://ftp.gnu.org
 Source0:        http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz
-BuildRequires:  gcc
-Requires:       gcc, automake, autoconf
+#BuildRequires:  gcc
+#Requires:       gcc, automake, autoconf
 BuildRoot:      %_topdir/BUILDROOT
 Prefix:         /opt/test/%{name}-%{version}
 
