@@ -40,7 +40,6 @@ tar -xzvf %_topdir/SOURCES/zlib-1.2.11.tar.gz -C %_topdir/BUILD/
 --with-http_dav_module \
 --with-http_realip_module \
 --with-http_mp4_module \
---with-http_xslt_module 
 --with-http_geoip_module \
 --with-http_secure_link_module \
 --with-http_random_index_module \
@@ -49,7 +48,8 @@ tar -xzvf %_topdir/SOURCES/zlib-1.2.11.tar.gz -C %_topdir/BUILD/
 --with-stream \
 --with-stream_ssl_module \
 --with-debug \
---with-pcre-jit
+--with-pcre-jit \
+--with-http_xslt_module
 
 make %{?_smp_mflags}
 
