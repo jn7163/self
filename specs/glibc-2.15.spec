@@ -9,7 +9,7 @@ Source0:        http://ftp.gnu.org/gnu/glibc/glibc-2.15.tar.gz
 #BuildRequires:  gcc
 #Requires:       gcc, automake, autoconf
 BuildRoot:      %_topdir/BUILDROOT
-Prefix:         /opt/test/%{name}-%{version}
+Prefix:         /opt/%{name}-%{version}
 
 %description
 
