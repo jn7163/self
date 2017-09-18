@@ -29,7 +29,14 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 
 %files
- 
+   %{prefix}/include/mpc.h
+   %{prefix}/lib/libmpc.a
+   %{prefix}/lib/libmpc.la
+   %{prefix}/lib/libmpc.so
+   %{prefix}/lib/libmpc.so.3
+   %{prefix}/lib/libmpc.so.3.0.0
+   %{prefix}/share/info/dir
+   %{prefix}/share/info/mpc.info
 %doc
  
 %changelog
