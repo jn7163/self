@@ -27,7 +27,7 @@ make %{?_smp_mflags}
 
 %install
 cd %_topdir/BUILD/%{name}-%{version}/test
-make install
+make install DESTDIR=%{buildroot}
 
 %files
  
