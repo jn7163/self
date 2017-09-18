@@ -8,7 +8,7 @@ URL:            http://ftp.gnu.org
 Source0:        glibc-2.14.tar.gz
 #BuildRequires:  gcc
 #Requires:       gcc, automake, autoconf
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot:      %_topdir/BUILDROOT
 Prefix:         /opt/%{name}-%{version}
 
 %description
