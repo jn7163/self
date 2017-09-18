@@ -1,6 +1,6 @@
 Name:           glibc
 Version:        2.14
-Release:        %{version}-1%{?dist}
+Release:        %{version}%{?dist}
 Summary:        Test
 Group:          Test
 License:        No
