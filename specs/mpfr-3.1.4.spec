@@ -27,7 +27,27 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 
 %files
- 
+   %{prefix}/include/mpf2mpfr.h
+   %{prefix}/include/mpfr.h
+   %{prefix}/lib/libmpfr.a
+   %{prefix}/lib/libmpfr.la
+   %{prefix}/lib/libmpfr.so
+   %{prefix}/lib/libmpfr.so.4
+   %{prefix}/lib/libmpfr.so.4.1.4
+   %{prefix}/share/doc/mpfr/AUTHORS
+   %{prefix}/share/doc/mpfr/BUGS
+   %{prefix}/share/doc/mpfr/COPYING
+   %{prefix}/share/doc/mpfr/COPYING.LESSER
+   %{prefix}/share/doc/mpfr/FAQ.html
+   %{prefix}/share/doc/mpfr/NEWS
+   %{prefix}/share/doc/mpfr/TODO
+   %{prefix}/share/doc/mpfr/examples/ReadMe
+   %{prefix}/share/doc/mpfr/examples/divworst.c
+   %{prefix}/share/doc/mpfr/examples/rndo-add.c
+   %{prefix}/share/doc/mpfr/examples/sample.c
+   %{prefix}/share/doc/mpfr/examples/version.c
+   %{prefix}/share/info/dir
+   %{prefix}/share/info/mpfr.info
 %doc
  
 %changelog
