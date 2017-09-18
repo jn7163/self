@@ -9,7 +9,7 @@ Source0:        http://nginx.org/download/%{name}-%{version}.tar.gz
 #BuildRequires:  gcc, automake
 #Requires:       gcc
 BuildRoot:      %_topdir/BUILDROOT
-Prefix:         /opt/test/%{name}-%{version}
+Prefix:         /opt/%{name}-%{version}
 
 %description
 
