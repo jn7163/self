@@ -9,7 +9,7 @@ Source0:        http://mirrors.ustc.edu.cn/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.gz
 #BuildRequires:  gcc
 #Requires:       gcc, automake, autoconf
 BuildRoot:      %_topdir/BUILDROOT
-Prefix:         /opt/test/%{name}-%{version}
+Prefix:         /opt/%{name}-%{version}
 
 %description
 
