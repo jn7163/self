@@ -9,7 +9,7 @@ Source0:        http://mirrors.ustc.edu.cn/gnu/mpc/mpc-1.0.3.tar.gz
 #BuildRequires:  gcc
 #Requires:       gcc, automake, autoconf
 BuildRoot:      %_topdir/BUILDROOT
-Prefix:         /opt/test/%{name}-%{version}
+Prefix:         /opt/%{name}-%{version}
 
 %description
 
