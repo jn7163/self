@@ -18,15 +18,16 @@ Prefix:         /opt/test/%{name}-%{version}
 %setup -q
 
 %build
-##mkdir %_topdir/BUILD/
-##cd 
+mkdir %_topdir/BUILD/%{name}-%{version}/test
+cd %_topdir/BUILD/%{name}-%{version}/test
 ../configure \
 --prefix=%{prefix}
 
 make %{?_smp_mflags}
 
 %install
-make install
+cd %_topdir/BUILD/%{name}-%{version}/test
+make install DESTDIR=%{buildroot}
 
 %files
  
