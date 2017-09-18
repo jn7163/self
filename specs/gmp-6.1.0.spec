@@ -27,7 +27,16 @@ make %{?_smp_mflags}
 make install DESTDIR=%{buildroot}
 
 %files
- 
+   %{prefix}/include/gmp.h
+   %{prefix}/lib/libgmp.a
+   %{prefix}/lib/libgmp.la
+   %{prefix}/lib/libgmp.so
+   %{prefix}/lib/libgmp.so.10
+   %{prefix}/lib/libgmp.so.10.3.0
+   %{prefix}/share/info/dir
+   %{prefix}/share/info/gmp.info
+   %{prefix}/share/info/gmp.info-1
+   %{prefix}/share/info/gmp.info-2
 %doc
  
 %changelog
