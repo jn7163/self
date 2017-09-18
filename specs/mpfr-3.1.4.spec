@@ -9,7 +9,7 @@ Source0:        http://mirrors.ustc.edu.cn/gnu/mpfr/mpfr-3.1.4.tar.bz2
 #BuildRequires:  gcc
 #Requires:       gcc, automake, autoconf
 BuildRoot:      %_topdir/BUILDROOT
-Prefix:         /opt/test/%{name}-%{version}
+Prefix:         /opt/%{name}-%{version}
 
 %description
 
@@ -25,7 +25,7 @@ Prefix:         /opt/test/%{name}-%{version}
 make %{?_smp_mflags}
 
 %install
-make install
+make install DESTDIR=%{buildroot}
 
 %files
  
