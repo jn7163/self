@@ -1,5 +1,6 @@
 ver=7.1.0
 yum install openssl-devel bzip2-devel curl-devel gd-devel readline-devel -y
+#curl-devel会安装autoconf、automake
 wget http://jp2.php.net/distributions/php-${ver}.tar.gz
 tar -xzvf php-${ver}.tar.gz
 cd php-${ver}
