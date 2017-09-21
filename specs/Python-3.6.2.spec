@@ -9,7 +9,7 @@ Source0:        Python-3.6.2.tar.xz
 #BuildRequires:  gcc
 #Requires:       gcc, automake, autoconf
 BuildRoot:      %_topdir/BUILDROOT
-Prefix:         /usr
+Prefix:         /usr/local
 
 %description
 
