@@ -1,4 +1,4 @@
-Name:           python
+Name:           Python
 Version:        3.6.2
 Release:        1%{?dist}
 Summary:        Test
