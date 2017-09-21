@@ -19,8 +19,8 @@ Prefix:         /opt/%{name}-%{version}
 
 %build
 ./configure --enable-optimizations
-sed -i 's/#zlib zlibmodul/zlib zlibmodul/g' /root/Python-3.6.2/Modules/Setup
-sed -i '209,212s/#//g' /root/Python-3.6.2/Modules/Setup
+sed -i 's/#zlib zlibmodul/zlib zlibmodul/g' Modules/Setup
+sed -i '209,212s/#//g' Modules/Setup
 
 make %{?_smp_mflags}
 
