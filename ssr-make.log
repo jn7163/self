@@ -41,16 +41,16 @@ mkdir glibc-2.15/glibc-2.15-build && cd glibc-2.15/glibc-2.15-build
 ../configure --prefix=/opt/glibc-2.15
 make && make install && cd
 
-echo "rm -rf /lib64/libc.so.6
-LD_PRELOAD=/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6" >> /root/glibc-default.sh
+echo 'rm -rf /lib64/libc.so.6
+LD_PRELOAD=/lib64/libc-2.12.so ln -s /lib64/libc-2.12.so /lib64/libc.so.6' >> /root/glibc-default.sh
 chmod +x /root/glibc-default.sh
-echo "ver=2.14
+echo 'ver=2.14
 rm -rf /lib64/libc.so.6
-LD_PRELOAD=/opt/glibc-${ver}/lib/libc-${ver}.so ln -s /opt/glibc-${ver}/lib/libc-${ver}.so /lib64/libc.so.6" >> /root/glibc-2.14.sh
+LD_PRELOAD=/opt/glibc-${ver}/lib/libc-${ver}.so ln -s /opt/glibc-${ver}/lib/libc-${ver}.so /lib64/libc.so.6' >> /root/glibc-2.14.sh
 chmod +x /root/glibc-2.14.sh
-echo "ver=2.15
+echo 'ver=2.15
 rm -rf /lib64/libc.so.6
-LD_PRELOAD=/opt/glibc-${ver}/lib/libc-${ver}.so ln -s /opt/glibc-${ver}/lib/libc-${ver}.so /lib64/libc.so.6" >> /root/glibc-2.15.sh
+LD_PRELOAD=/opt/glibc-${ver}/lib/libc-${ver}.so ln -s /opt/glibc-${ver}/lib/libc-${ver}.so /lib64/libc.so.6' >> /root/glibc-2.15.sh
 chmod +x /root/glibc-2.15.sh
 
 cd /root/shadowsocksr-android
