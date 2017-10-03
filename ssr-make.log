@@ -21,7 +21,7 @@ echo "y" | /root/android-sdk/tools/bin/sdkmanager "build-tools;26.0.1"
 echo "y" | /root/android-sdk/tools/bin/sdkmanager "extras;google;m2repository"
 echo "y" | /root/android-sdk/tools/bin/sdkmanager "extras;android;m2repository"
 
-git clone https://github.com/shadowsocksr-backup/shadowsocksr-android
+git clone -b nokcp https://github.com/shadowsocksr-backup/shadowsocksr-android
 
 ##最后一步密码留空
 keytool -genkeypair -alias testname -keystore /root/ssr.keystore -sigalg MD5withRSA -keyalg RSA
