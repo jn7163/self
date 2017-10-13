@@ -1,0 +1,3 @@
+cd /opt
+wget https://dl.ccavs.org/linux/centos/python-3.6.3.tar.gz
+tar -xzvf python-3.6.3.tar.gz
